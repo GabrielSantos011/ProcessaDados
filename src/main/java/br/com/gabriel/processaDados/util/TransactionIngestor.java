@@ -29,7 +29,7 @@ public class TransactionIngestor {
 
             return lines
                     .skip(1)
-                    .limit(1_000)
+                    .limit(50_000)
                     .map(this::parseTransaction)
                     .flatMap(Optional::stream)
                     .toList();
